@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  application:
+    build: .
+    container_name: application
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - roma_db
+
+  roma_db:
+    image: mysql:8.1.0
+    environment:
+      MYSQL_DATABASE: 'roma'
+      MYSQL_ROOT_PASSWORD: '123'
+    ports:
+      - '3310:3306'
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:

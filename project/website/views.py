@@ -53,7 +53,7 @@ def customer_record(request, pk):
     if request.user.is_authenticated:
         # Look Up Records
         customer_record = Record.objects.get(id=pk)
-        return render(request, 'record.html', {'customer_record': customer_record})
+        return render(request, 'tasks.html', {'customer_record': customer_record})
     else:
         messages.success(request, "You Must Be Logged In To View That Page...")
         return redirect('home')
