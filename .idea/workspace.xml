@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6675cdb-0216-40ad-8a92-0e1a5dcd8118" name="Changes" comment="Finish First step: CRUD DONE!">
+      <change beforePath="$PROJECT_DIR$/project/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/website/templates/record.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/website/templates/tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/website/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;author&quot;: &quot;joaoricardoroma&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;author&quot;: &quot;joaoricardoroma&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1b328057-2ca8-43cb-8281-6dd02b6b9589" />
+        <option name="url" value="git@github.com:joaoricardoroma/project_organizeMe.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2ULo4vU9ONiWXOHfC9HjfXhyjT0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="project/docker-compose.yaml.db: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="db" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="project/docker-compose.yaml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.project/docker-compose.yaml.db: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6675cdb-0216-40ad-8a92-0e1a5dcd8118" name="Changes" comment="" />
+      <created>1692728034166</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692728034166</updated>
+      <workItem from="1692738845332" duration="297000" />
+      <workItem from="1692739149848" duration="1481000" />
+      <workItem from="1693518309179" duration="3848000" />
+      <workItem from="1693656202828" duration="4777000" />
+      <workItem from="1693834588465" duration="20897000" />
+      <workItem from="1694266242911" duration="6606000" />
+      <workItem from="1694548033089" duration="1832000" />
+      <workItem from="1694666402160" duration="1657000" />
+      <workItem from="1694817065539" duration="601000" />
+      <workItem from="1695148547286" duration="3620000" />
+    </task>
+    <task id="LOCAL-00001" summary=".">
+      <option name="closed" value="true" />
+      <created>1692739425402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692739425402</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1692739895550</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692739895550</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Registration">
+      <option name="closed" value="true" />
+      <created>1693948681192</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693948681192</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Finish First step: CRUD DONE!">
+      <option name="closed" value="true" />
+      <created>1694195365807</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694195365807</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="30ceb1db-accc-400e-9a5c-e7b77b99269b" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="30ceb1db-accc-400e-9a5c-e7b77b99269b">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Registration" />
+    <MESSAGE value="Finish First step: CRUD DONE!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish First step: CRUD DONE!" />
+  </component>
+</project>
