@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from rest_framework.generics import ListCreateAPIView
+
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
 
@@ -96,3 +98,15 @@ def update_record(request, pk):
     else:
         messages.success(request, "You Must Be Logged In...")
         return redirect('home')
+
+
+class RecordSerializer(ListCreateAPIView):
+
+    serializer_class = ContactSerializer
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+    def get_queryset(self):
+        return Contact.objects.filter(owner=self.request.user)

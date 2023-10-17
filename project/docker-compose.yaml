@@ -22,7 +22,7 @@ services:
     ports:
       - '3310:3306'
     volumes:
-      - my-db:/var/lib/mysql
+      - ./my-db:/var/lib/mysql
 
-volumes:
-  my-db:
+#volumes:
+#  my-db:

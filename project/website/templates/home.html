@@ -1,61 +1,54 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 {% block content %}
-{% if user.is_authenticated %}
+    {% if user.is_authenticated %}
+        <h1>Welcome to OrganizeMe</h1>
+        <br/>
+            <div class="col-md-6 border-right-0">
+                <div class="card">
+                <a href="{% url 'add_record' %}" class="btn btn-success">Organize yourself and create a Task</a>
+                    <div class="card-header">
+                        <h3 class="card-title">Tasks</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-hover">
+                            <tbody>
+                            {% if records %}
+                                {% for record in records %}
+                                    <tr data-widget="expandable-table" aria-expanded="false">
+                                        <td>{{ record.task }}</td>
+                                    </tr>
+                                    <tr class="expandable-body">
+                                        <td>
+                                            <p>
+                                                {{ record.task_description }}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <td><a href="{% url 'delete_record' record.id %}" class="btn btn-danger">Delete</a><a href="{% url 'update_record' record.id %}" class="btn btn-secondary">Update Record</a></td>
+                                {% endfor %}
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    {% else %}
+        <br/>
+        <h1>Login</h1>
+        <br/>
+        <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
 
-<h1>Welcome to OrganizeMe</h1>
-<br/>
-<h3>Here is your Records:</h3>
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Address</th>
-      <th scope="col">City</th>
-      <th scope="col">State</th>
-      <th scope="col">Zipcode</th>
-      <th scope="col">Created At</th>
-      <th scope="col">Id</th>
-    </tr>
-  </thead>
-  <tbody>
-      {% if records %}
-      {% for record in records %}
-        <tr>
-          <td>{{ record.first_name }}{{ record.last_name }}</td>
-          <td>{{ record.email }}</td>
-          <td>{{ record.phone }}</td>
-          <td>{{ record.address }}</td>
-          <td>{{ record.city }}</td>
-          <td>{{ record.state }}</td>
-          <td>{{ record.zipcode }}</td>
-          <td>{{ record.created_at }}</td>
-          <td><a href="{% url 'record' record.id %}">{{ record.id }}</a></td>
+            <div class="mb-3">
+                <input type="text" class="form-control" name="username" placeholder="Username" required>
+            </div>
             <br/>
-        </tr>
-      {% endfor %}
-  {% endif %}
-  </tbody>
-</table>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="password" required>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-secondary">Login</button>
+        </form>
 
-{% else %}
-<br/>
-<h1>Login</h1>
-<br/>
-<form method="POST" action="{% url 'home' %}">
-    {% csrf_token %}
-
-  <div class="mb-3">
-    <input type="text" class="form-control" name="username" placeholder="Username" required>
-  </div>
-<br/>
-  <div class="mb-3">
-    <input type="password" class="form-control" name="password" placeholder="password" required>
-  </div>
-<br/>
-  <button type="submit" class="btn btn-secondary">Login</button>
-</form>
-
-{% endif %}
+    {% endif %}
 {% endblock %}
