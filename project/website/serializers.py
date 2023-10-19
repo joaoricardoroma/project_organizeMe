@@ -5,4 +5,4 @@ from .models import Record
 class RecordSerializer(ModelSerializer):
     class Meta:
         model = Record
-        fields = '__all__'
+        fields = ['created_at', 'id', 'task', 'task_description', 'email']
