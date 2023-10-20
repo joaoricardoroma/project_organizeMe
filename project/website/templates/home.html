@@ -3,35 +3,39 @@
     {% if user.is_authenticated %}
         <h1>Welcome to OrganizeMe</h1>
         <br/>
-            <div class="col-md-6 border-right-0">
-                <div class="card">
+        <div class="row">
+        <div class="col-md-6 border-left-0">
+            <div class="card">
                 <a href="{% url 'add_record' %}" class="btn btn-success">Organize yourself and create a Task</a>
-                    <div class="card-header">
-                        <h3 class="card-title">Tasks</h3>
-                    </div>
-                    <div class="card-body">
-                        <table class="table table-bordered table-hover">
-                            <tbody>
-                            {% if records %}
-                                {% for record in records %}
-                                    <tr data-widget="expandable-table" aria-expanded="false">
-                                        <td>{{ record.task }}</td>
-                                    </tr>
-                                    <tr class="expandable-body">
-                                        <td>
-                                            <p>
-                                                {{ record.task_description }}
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <td><a href="{% url 'delete_record' record.id %}" class="btn btn-danger">Delete</a><a href="{% url 'update_record' record.id %}" class="btn btn-secondary">Update Record</a></td>
-                                {% endfor %}
-                            {% endif %}
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="card-header">
+                    <h3 class="card-title">Tasks</h3>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        {% if records %}
+                            {% for record in records %}
+                                <tr data-widget="expandable-table" aria-expanded="false">
+                                    <td>{{ record.task }}</td>
+                                </tr>
+                                <tr class="expandable-body">
+                                    <td>
+                                        <p>
+                                            {{ record.task_description }}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <td><a href="{% url 'delete_record' record.id %}" class="btn btn-danger">Delete</a><a
+                                        href="{% url 'update_record' record.id %}" class="btn btn-secondary">Update
+                                    Record</a></td>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
+        </div>
     {% else %}
         <br/>
         <h1>Login</h1>

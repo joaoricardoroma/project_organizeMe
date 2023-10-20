@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from rest_framework.generics import ListCreateAPIView
-
 from .forms import SignUpForm, AddRecordForm
 from .models import Record
+import requests
 
 
 def home(request):
@@ -23,7 +22,9 @@ def home(request):
             messages.success(request, "There Was An Error Logging In, Please Try Again...")
             return redirect('home')
     else:
-        return render(request, 'home.html', {'records': records})
+        return render(request, 'home.html',
+                      {'records': records,
+                       })
 
 
 def logout_user(request):
@@ -100,13 +101,11 @@ def update_record(request, pk):
         return redirect('home')
 
 
-class RecordSerializer(ListCreateAPIView):
-
-    serializer_class = ContactSerializer
-    permission_classes = (permissions.IsAuthenticated,)
-
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
-    def get_queryset(self):
-        return Contact.objects.filter(owner=self.request.user)
+def pets(request):
+    api_content = requests.get('https://pokeapi.co/api/v2/pokemon?limit=10&offset=0').json()
+    pokemon_details = []
+    for pokemon in api_content['results']:
+        pokemon = pokemon['url']
+        url_pokemon = requests.get(pokemon).json()
+        pokemon_details.append(url_pokemon)
+    return render(request, 'pets.html', {'api_content': api_content, 'pokemon_details': pokemon_details})

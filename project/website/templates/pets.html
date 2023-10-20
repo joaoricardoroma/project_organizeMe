@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>Welcome to Pokepets</h1>
+        <br/>
+        <div class="row">
+        <div class="col-md-12 border-right-0" >
+        <div class="card">
+                <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">PokePets</h3>
+                  </div>
+                  <div class="card-body p-0">
+                    <ul class="users-list clearfix">
+                        {% for pokemons in pokemon_details %}
+                      <li>
+                        <img src="{{ pokemons.sprites.front_default }}" alt="User Image">
+                        <a class="users-list-name" href="">{{ pokemons.name }}</a>
+                        <span class="users-list-date">Today</span>
+                      </li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        </div>
+        </div>
+    {% else %}
+        <br/>
+        <h1>Login</h1>
+        <br/>
+        <form method="POST" action="{% url 'home' %}">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <input type="text" class="form-control" name="username" placeholder="Username" required>
+            </div>
+            <br/>
+            <div class="mb-3">
+                <input type="password" class="form-control" name="password" placeholder="password" required>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-secondary">Login</button>
+        </form>
+
+    {% endif %}
+{% endblock %}
