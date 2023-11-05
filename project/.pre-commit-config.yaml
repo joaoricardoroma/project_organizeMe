@@ -1,0 +1,22 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+
+    -   id: check-added-large-files
+    -   id: check-ast
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+
+
+-   repo: https://github.com/PyCQA/pylint
+    rev: v3.0.1
+    hooks:
+      - id: pylint
+        args: [ '--disable=missing-docstring', '--enable=unused-variable', '--disable=line-too-long', '--disable=import-error','--disable=too-few-public-methods']
+        name: pylint
+        entry: pylint
+        language: python
+        types: [ python ]
+        require_serial: true
+
